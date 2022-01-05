@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const middleware = require('./middleware');
 const loginRouter = require('./routes/loginRoute');
 
@@ -7,6 +8,7 @@ const PORT = '3100';
 
 const server = app.listen(PORT, () => console.log('Express listening'));
 
+app.use(express.static(path.join(__dirname, 'public')));
 // set html template engine as pug
 app.set('view engine', 'pug');
 // set template folders as views folder
