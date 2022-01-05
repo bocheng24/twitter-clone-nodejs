@@ -2,12 +2,13 @@ extends layouts/login-layout.pug
 
 block content 
     .signupContainer
+        div(class=alertType) #{msg}
         h1 Create your account
         form#signup-form(method="post", onsubmit="event.preventDefault(); validateForm();")
-            input.input-text(type="text", name="firstName", placeholder="First Name", required="")
-            input.input-text(type="text", name="lastName", placeholder="Last Name", required="")
-            input.input-text(type="text", name="username", placeholder="Username", required="")
-            input.input-text(type="email", name="email", placeholder="Email", required="")
+            input.input-text(type="text", name="firstName", placeholder="First Name", value=firstName, required="")
+            input.input-text(type="text", name="lastName", placeholder="Last Name", value=lastName, required="")
+            input.input-text(type="text", name="username", placeholder="Username", value=username, required="")
+            input.input-text(type="email", name="email", placeholder="Email", value=email required="")
             input.input-text#password(type="password", name="password", placeholder="Password", required="")
             input.input-text#passwordCfm(type="password", name="passwordCfm", placeholder="Confirm Password", required="")
             div

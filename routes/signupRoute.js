@@ -12,8 +12,26 @@ router.get('/', (req, res, next) => {
 })
 
 router.post('/', (req, res, next) => {
-    console.log(req.body);
-    res.status(200).render('signup');
+    let payload = req.body;
+
+    let { firstName, lastName, username, email, password } = payload;
+
+    firstName = firstName.trim();
+    lastName = lastName.trim();
+    username = username.trim();
+    email = email.trim();
+
+    if (firstName && lastName && username && email && password) {
+
+    }
+    else {
+        payload.alertType = "alert alert-danger";
+        payload.msg = "You have empty fields";
+        console.log(payload)
+        
+        res.status(200).render('signup', payload);
+    }
+
 })
 
 module.exports = router;
