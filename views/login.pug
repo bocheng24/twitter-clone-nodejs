@@ -1,0 +1,10 @@
+extends layouts/login-layout.pug
+
+block content 
+    .loginContainer
+        h1 Login
+        form(method="post")
+            input(type="text", name="loginUsername", placeholder="Username or email", require="")
+            input(type="text", name="loginPassword", placeholder="Password", require="")
+            input(type="submit", value="Login")
+        a(href="/signup") Join Twitter today

@@ -1,4 +1,6 @@
 const express = require('express');
+const middleware = require('./middleware');
+const loginRouter = require('./routes/loginRoute');
 
 const app = express();
 const PORT = '3100';
@@ -10,7 +12,9 @@ app.set('view engine', 'pug');
 // set template folders as views folder
 app.set('views', 'views');
 
-app.get('/', (req, res, next) => {
+app.use('/login', loginRouter);
+
+app.get('/', middleware.requireLogin, (req, res, next) => {
     const payload = {
         pageTitle: 'Home'
     }
