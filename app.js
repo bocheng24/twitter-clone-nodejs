@@ -1,5 +1,7 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
+
 const middleware = require('./middleware');
 
 const app = express();
@@ -16,6 +18,9 @@ app.set('views', 'views');
 // Routes
 const signupRouter = require('./routes/signupRoute');
 const loginRouter = require('./routes/loginRoute');
+
+// put body parser before routes
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/signup', signupRouter);
 app.use('/login', loginRouter);

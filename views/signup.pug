@@ -22,5 +22,6 @@ block content
         const passwordCfm = document.getElementById('passwordCfm');
 
         const validateForm = () => {
+            console.log(form);
             password.value === passwordCfm.value ? form.submit() : alert("Password do not match");
         }

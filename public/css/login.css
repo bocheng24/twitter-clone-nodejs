@@ -41,8 +41,8 @@ body {
     border: none;
     width: 100%;
     color: #fff;
-    border-radius: 35px;
-    padding: 10px;
+    border-radius: 4.5px;
+    padding: 15px;
     transition: all 0.3s;
     box-shadow: 0 2px 3.5px rgba(0, 0, 0, 0.35);
     -webkit-box-shadow: 0 2px 3.5px rgba(0, 0, 0, 0.35);
@@ -95,12 +95,12 @@ input {
     font-weight: 300;
     color: #333;
     border: 1px #c1cbda solid;
-    border-radius: 6px;
+    border-radius: 4.5px;
     transition: all 0.3s;
 }
 
 .input-text:focus {
-    outline: 1px solid #40739e;
+    outline: 1px solid #6cade2;
 }
 
 
@@ -108,8 +108,8 @@ input {
     border: none;
     color: #fff;
     background-color: #079992;
-    border-radius: 35px;
-    padding: 10px;
+    border-radius: 4.5px;
+    padding: 15px;
     transition: all 0.3s;
     box-shadow: 0 2px 3.5px rgba(0, 0, 0, 0.35);
     -webkit-box-shadow: 0 2px 3.5px rgba(0, 0, 0, 0.35);
