@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const middleware = require('./middleware');
-const loginRouter = require('./routes/loginRoute');
 
 const app = express();
 const PORT = '3100';
@@ -14,6 +13,11 @@ app.set('view engine', 'pug');
 // set template folders as views folder
 app.set('views', 'views');
 
+// Routes
+const signupRouter = require('./routes/signupRoute');
+const loginRouter = require('./routes/loginRoute');
+
+app.use('/signup', signupRouter);
 app.use('/login', loginRouter);
 
 app.get('/', middleware.requireLogin, (req, res, next) => {

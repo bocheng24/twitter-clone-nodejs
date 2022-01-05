@@ -1,0 +1,17 @@
+extends layouts/login-layout.pug
+
+block content 
+    .signupContainer
+        h1 Create your account
+        form(method="post")
+            input.input-text(type="text", name="firstName", placeholder="First Name", require="")
+            input.input-text(type="text", name="lastName", placeholder="Last Name", require="")
+            input.input-text(type="text", name="username", placeholder="Username", require="")
+            input.input-text(type="email", name="email", placeholder="Email", require="")
+            input.input-text(type="password", name="password", placeholder="Password", require="")
+            input.input-text(type="password", name="passwordCfm", placeholder="Confirm Password", require="")
+        div
+            input.input-signup(type="submit", value="Sign up")
+        div 
+            span Already have an account? 
+            a(href="/login") Login
