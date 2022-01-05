@@ -9,4 +9,8 @@ router.get('/', (req, res, next) => {
     res.status(200).render('signup');
 })
 
+router.post('/', (req, res, next) => {
+    res.status(200).render('signup');
+})
+
 module.exports = router;

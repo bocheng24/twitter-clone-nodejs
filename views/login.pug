@@ -4,9 +4,10 @@ block content
     .loginContainer
         h1 Login
         form(method="post")
-            input.input-text(type="text", name="loginUsername", placeholder="Username or email", require="")
-            input.input-text(type="password", name="loginPassword", placeholder="Password", require="")
+            input.input-text(type="text", name="loginUsername", placeholder="Username or email", required="")
+            input.input-text(type="password", name="loginPassword", placeholder="Password", required="")
             input.input-submit(type="submit", value="Login")
         div 
             span Don't have an account? 
             a(href="/signup") Sign up
+
